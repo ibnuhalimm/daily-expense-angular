@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
-import Category from 'src/models/Category';
+import { Router } from '@angular/router';
+import { Category } from '../../../contracts/Category';
 
 @Component({
   selector: 'app-expense-add',
@@ -8,21 +8,43 @@ import Category from 'src/models/Category';
   styleUrls: ['./expense-add.component.css']
 })
 export class ExpenseAddComponent implements OnInit {
-    pageTitle: string = 'Catat Pengeluaran';
-
-    pathToHome: string = '/';
+    pageTitle: string;
+    pathToHome: string;
+    textRupiah: string;
+    iconCalendar: string;
+    valueDate: string;
 
     categories: Category[] = [
-        new Category(1, 'Arisan'),
-        new Category(2, 'Pulsa dan Kuota'),
-        new Category(3, 'Operasional Motor'),
-        new Category(4, 'Fashion'),
-        new Category(5, 'Kebutuhan Pangan'),
-        new Category(6, 'Jajan dan Jalan-jalan'),
-        new Category(7, 'Lain-lain')
+        {
+            value: 1,
+            label: 'Arisan'
+        },
+        {
+            value: 2,
+            label: 'Operasional Kendaraan'
+        },
+        {
+            value: 3,
+            label: 'Kebutuhan Pangan'
+        },
+        {
+            value: 4,
+            label: 'Fashion dan Jalan-jalan'
+        },
+        {
+            value: 5,
+            label: 'Gadget & Elektronik'
+        }
     ];
 
-    constructor(private router: Router) { }
+    constructor(private router: Router) {
+        this.pageTitle = 'Catat Pengeluaran';
+        this.pathToHome = '/';
+        this.textRupiah = 'Rp';
+        this.iconCalendar = 'bi bi-calendar2-week';
+
+        this.valueDate = '';
+    }
 
     ngOnInit(): void {
     }

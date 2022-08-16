@@ -19,6 +19,9 @@ import { ExpenseItemComponent } from './components/expense-item/expense-item.com
 import { ButtonLinkComponent } from './components/button-link/button-link.component';
 import { PrimaryButtonComponent } from './components/primary-button/primary-button.component';
 import { CategoryItemComponent } from './components/form/category-item/category-item.component';
+import { InputPrependTextComponent } from './components/form/input-prepend-text/input-prepend-text.component';
+import { InputAppendIconComponent } from './components/form/input-append-icon/input-append-icon.component';
+import { InputTextComponent } from './components/form/input-text/input-text.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,11 @@ import { CategoryItemComponent } from './components/form/category-item/category-
     ButtonLinkComponent,
 
     PrimaryButtonComponent,
-    CategoryItemComponent
+    CategoryItemComponent,
+
+    InputPrependTextComponent,
+    InputAppendIconComponent,
+    InputTextComponent
   ],
   imports: [
     BrowserModule,
