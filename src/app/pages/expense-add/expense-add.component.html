@@ -1,0 +1,66 @@
+<header>
+    <nav class="relative">
+        <app-page-back-button [path]="pathToHome"></app-page-back-button>
+        <app-page-title [text]="pageTitle"></app-page-title>
+    </nav>
+</header>
+<main class="relative top-20 py-2">
+    <app-container>
+        <div class="mb-6">
+            <label for="" class="block mb-1">
+                Nominal
+            </label>
+            <div class="px-4 py-2 h-10 rounded-xl border border-solid border-gray-300 flex flex-row items-center justify-between">
+                <div class="w-8">
+                    Rp
+                </div>
+                <div class="w-full">
+                    <input type="text" class="w-full outline-none">
+                </div>
+            </div>
+        </div>
+        <div class="mb-6">
+            <label for="" class="block mb-1">
+                Keperluan
+            </label>
+            <div class="px-4 py-2 h-10 rounded-xl border border-solid border-gray-300 flex flex-row items-center justify-between">
+                <div class="w-full">
+                    <input type="text" class="w-full outline-none">
+                </div>
+            </div>
+        </div>
+        <div class="mb-6">
+            <label for="" class="block mb-1">
+                Tanggal
+            </label>
+            <div class="px-4 py-2 h-10 rounded-xl border border-solid border-gray-300 flex flex-row items-center justify-between">
+                <div class="w-full">
+                    <input type="text" class="w-full outline-none">
+                </div>
+                <div class="w-8 text-right">
+                    <i class="bi bi-calendar2-week text-sm text-gray-500"></i>
+                </div>
+            </div>
+        </div>
+        <div class="mb-6">
+            <label for="" class="block mb-1">
+                Kategori
+            </label>
+            <div class="p-4 h-36 rounded-xl border border-solid border-gray-300 overflow-y-auto">
+                <app-form-category-item
+                    *ngFor="let category of categories"
+                    [value]="category.value"
+                    [label]="category.label"></app-form-category-item>
+            </div>
+        </div>
+        <div>
+            <div class="w-36 mx-auto">
+                <app-primary-button
+                    (onClick)="onSaveExpense()">
+                    Simpan
+                </app-primary-button>
+            </div>
+        </div>
+    </app-container>
+</main>
+

@@ -1,0 +1,122 @@
+<header>
+    <nav class="relative">
+        <app-page-title [text]="pageTitle"></app-page-title>
+    </nav>
+    <app-bottom-nav></app-bottom-nav>
+</header>
+<main class="relative top-20 py-2">
+    <app-container>
+        <section>
+            <h2 class="text-xl">
+                Hai, Ibnu
+            </h2>
+            <p class=" text-gray-500">
+                Ada pengeluaran apa hari ini?
+            </p>
+        </section>
+
+        <section class="mt-6">
+            <div class="flex flex-row items-center justify-between gap-x-4">
+                <div>
+                    <div class="w-40 h-40 bg-gray-300 rounded-full flex items-center justify-center">
+                        <div class="w-[8.25rem] h-[8.25rem] rounded-full bg-white flex items-center justify-center">
+                            <div class="w-[7.5rem] h-[7.5rem] rounded-full border-gray-200 p-4 border-expense-home">
+                                <div class="w-full h-full text-center text-xxs flex flex-col items-center justify-center">
+                                    <div class="w-14 leading-tight text-gray-500">
+                                        Pengeluaran Hari Ini
+                                    </div>
+                                    <div class="my-1">
+                                        <span class="relative -top-2 text-xs font-bold">
+                                            Rp
+                                        </span>
+                                        <span class="text-lg font-bold">
+                                            202,3k
+                                        </span>
+                                    </div>
+                                    <div class="text-gray-500">
+                                        08 Agu 2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="-mt-1">
+                        <div class="w-full h-12 border border-dotted border-t-0 border-r-0 border-l-0 border-gray-400 flex flex-row items-center gap-x-2">
+                            <div class="w-5">
+                                <i class="bi bi-calendar2-week text-sm text-gray-500"></i>
+                            </div>
+                            <div class="w-full">
+                                <div class="text-xxs text-gray-500">
+                                    Bulan Ini
+                                </div>
+                                <div class="text-xs">
+                                    Rp 1.694.000,-
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-12 border border-dotted border-t-0 border-r-0 border-l-0 border-gray-400 flex flex-row items-center gap-x-2">
+                            <div class="w-5">
+                                <i class="bi bi-puzzle text-sm text-gray-500"></i>
+                            </div>
+                            <div class="w-full">
+                                <div class="text-xxs text-gray-500">
+                                    Rata-rata Harian
+                                </div>
+                                <div class="text-xs">
+                                    Rp 78.500,-
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-12 border border-dotted border-t-0 border-r-0 border-l-0 border-gray-400 flex flex-row items-center gap-x-2">
+                            <div class="w-5">
+                                <i class="bi bi-sort-up text-sm text-gray-500"></i>
+                            </div>
+                            <div class="w-full">
+                                <div class="text-xxs text-gray-500">
+                                    Tertinggi Harian
+                                </div>
+                                <div class="text-xs">
+                                    Rp 850.000,-
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-8 pb-14">
+            <h2 class="font-bold">
+                Data Pengeluaran
+            </h2>
+            <div class="mt-4 flex flex-row justify-between gap-x-4">
+                <div class="w-2/5">
+                    <app-button-link
+                        [path]="routeExpenseAdd"
+                        [icon]="iconPlus"
+                        [text]="textPengeluaran"></app-button-link>
+                </div>
+                <div class="w-3/5">
+                    <div class="">
+                        <div class="h-8 px-4 border border-solid border-gray-300 rounded-2xl flex flex-row items-center justify-between">
+                            <div class="w-5 text-gray-300">
+                                <i class="bi bi-calendar2-week"></i>
+                            </div>
+                            <div class="w-full">
+                                <input type="text" value="01 Agu 2022 - 10 Agu 2022" class="w-full text-center text-xxs outline-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <app-expense-item></app-expense-item>
+                <app-expense-item></app-expense-item>
+                <app-expense-item></app-expense-item>
+                <app-expense-item></app-expense-item>
+            </div>
+        </section>
+    </app-container>
+</main>
