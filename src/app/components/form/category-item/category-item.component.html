@@ -1,10 +1,6 @@
-<div class="mb-1 py-2 border border-dashed border-t-0 border-r-0 border-l-0 border-gray-300 flex flex-row items-center justify-start gap-x-2">
-    <div>
-        <input type="radio" name="category_id" id="category_{{ value }}" value="{{ value }}"/>
-    </div>
-    <div class="relative -top-[.10rem]">
-        <label for="category_{{ value }}">
-            {{ label }}
-        </label>
-    </div>
-</div>
+<fieldset class="mb-1 py-2 border border-dashed border-t-0 border-r-0 border-l-0 border-gray-300 flex flex-row items-center justify-start gap-x-2">
+    <input type="radio" name="category_id" id="category_{{ value }}" value="{{ value }}" class="block" />
+    <label for="category_{{ value }}" class="relative block -top-[.10rem]">
+        {{ label }}
+    </label>
+</fieldset>
