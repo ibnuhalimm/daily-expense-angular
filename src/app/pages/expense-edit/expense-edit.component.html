@@ -52,32 +52,34 @@
             </div>
         </div>
     </app-container>
-
-    <div
-        class="fixed inset-0 bg-gray-900 bg-opacity-60"
-        *ngIf="showDeleteConfirm">
-        <div class="absolute left-0 top-auto right-0 bottom-0 py-10 bg-white rounded-tl-xl rounded-tr-xl">
-            <app-container>
-                <div class="w-56 mx-auto">
-                    <p class="text-center">
-                        Apakah Anda yakin ingin menghapus pengeluaran ini?
-                    </p>
-                </div>
-                <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
-                    <div class="w-36">
-                        <form-secondary-button
-                            (onClick)="onCancelDelete()">
-                            Tidak
-                        </form-secondary-button>
-                    </div>
-                    <div class="w-36">
-                        <form-primary-button
-                            (onClick)="onSaveExpense()">
-                            Ya, Hapus
-                        </form-primary-button>
-                    </div>
-                </div>
-            </app-container>
-        </div>
-    </div>
 </main>
+
+
+<div
+    class="fixed inset-0 bg-gray-900 bg-opacity-60 z-30"
+    *ngIf="showDeleteConfirm">
+    <div class="absolute left-0 top-auto right-0 bottom-0 py-10 bg-white rounded-tl-xl rounded-tr-xl">
+        <app-container>
+            <div class="w-56 mx-auto">
+                <p class="text-center">
+                    Apakah Anda yakin ingin menghapus pengeluaran ini?
+                </p>
+            </div>
+            <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
+                <div class="w-36">
+                    <form-secondary-button
+                        (onClick)="onCancelDelete()">
+                        Tidak
+                    </form-secondary-button>
+                </div>
+                <div class="w-36">
+                    <form-primary-button
+                        (onClick)="onSaveExpense()">
+                        Ya, Hapus
+                    </form-primary-button>
+                </div>
+            </div>
+        </app-container>
+    </div>
+</div>
+
