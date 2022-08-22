@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from "@angular/core";
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-expense-item',
@@ -6,9 +7,9 @@ import { Component, EventEmitter, Output } from "@angular/core";
 })
 
 export class ExpenseItemComponent {
-    @Output() onClick: EventEmitter<any> = new EventEmitter();
+    constructor(private router: Router) {}
 
-    onClickEvent() {
-        this.onClick.emit();
+    goToEditExpense() {
+        this.router.navigate(['/expense/edit']);
     }
 }
