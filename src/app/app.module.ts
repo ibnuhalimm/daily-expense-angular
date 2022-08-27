@@ -22,8 +22,10 @@ import { CategoryItemComponent } from './components/form/category-item/category-
 import { InputPrependTextComponent } from './components/form/input-prepend-text/input-prepend-text.component';
 import { InputAppendIconComponent } from './components/form/input-append-icon/input-append-icon.component';
 import { InputTextComponent } from './components/form/input-text/input-text.component';
-import { FormPrimaryButtonComponent } from './components/form/primary-button/primary-button.component';
-import { FormSecondaryButtonComponent } from './components/form/secondary-button/secondary-button.component';
+import { FormPrimaryButtonBgComponent } from './components/form/primary-button-bg/primary-button-bg.component';
+import { FormPrimaryButtonTransparentComponent } from './components/form/primary-button-tranparent/primary-button-transparent.component';
+import { FormDangerButtonBgComponent } from './components/form/danger-button-bg/danger-button-bg.component';
+import { FormDangerButtonTransparentComponent } from './components/form/danger-button-transparent/danger-button-transparent.component';
 
 @NgModule({
   declarations: [
@@ -49,14 +51,13 @@ import { FormSecondaryButtonComponent } from './components/form/secondary-button
     InputPrependTextComponent,
     InputAppendIconComponent,
     InputTextComponent,
-    FormPrimaryButtonComponent,
-    FormSecondaryButtonComponent
+    FormPrimaryButtonBgComponent,
+    FormPrimaryButtonTransparentComponent,
+    FormDangerButtonBgComponent,
+    FormDangerButtonTransparentComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

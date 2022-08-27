@@ -8,7 +8,7 @@
 @layer base {
   body {
     font-family: "Plus Jakarta Sans", sans-serif;
-    @apply text-xs;
+    @apply text-xs text-oxford-blue;
   }
 }
 
@@ -16,5 +16,6 @@
   .border-expense-home {
     border-style: dotted;
     border-width: medium;
+    @apply border-cerise-pink;
   }
 }

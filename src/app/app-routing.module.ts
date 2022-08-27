@@ -9,39 +9,39 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
-    {
-        path: '',
-        component: HomeComponent,
-        pathMatch: 'full'
-    },
-    {
-        path: 'expense/add',
-        component: ExpenseAddComponent
-    },
-    {
-        path: 'expense/edit',
-        component: ExpenseEditComponent
-    },
-    {
-        path: 'category',
-        component: CategoryComponent
-    },
-    {
-        path: 'login',
-        component: LoginComponent
-    },
-    {
-        path: 'profile',
-        component: ProfileComponent
-    },
-    {
-        path: '**',
-        component: NotFoundComponent
-    }
+  {
+    path: '',
+    component: HomeComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'expense/add',
+    component: ExpenseAddComponent,
+  },
+  {
+    path: 'expense/edit',
+    component: ExpenseEditComponent,
+  },
+  {
+    path: 'category',
+    component: CategoryComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

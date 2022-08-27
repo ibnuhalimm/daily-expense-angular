@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-primary-button',
-  templateUrl: './primary-button.component.html',
+  selector: 'form-danger-button-transparent',
+  templateUrl: './danger-button-transparent.component.html',
 })
-export class PrimaryButtonComponent {
+export class FormDangerButtonTransparentComponent {
   @Input() text: string = '';
 
   @Output() onClick: EventEmitter<any> = new EventEmitter();

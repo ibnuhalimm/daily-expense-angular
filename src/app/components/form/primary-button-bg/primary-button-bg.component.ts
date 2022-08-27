@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-primary-button',
-  templateUrl: './primary-button.component.html',
+  selector: 'form-primary-button-bg',
+  templateUrl: './primary-button-bg.component.html',
 })
-export class PrimaryButtonComponent {
+export class FormPrimaryButtonBgComponent {
   @Input() text: string = '';
 
   @Output() onClick: EventEmitter<any> = new EventEmitter();

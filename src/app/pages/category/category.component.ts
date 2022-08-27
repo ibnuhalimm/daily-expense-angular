@@ -3,14 +3,32 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css']
+  styleUrls: ['./category.component.css'],
 })
 export class CategoryComponent implements OnInit {
-    pageTitle: string = 'Kategori';
+  pageTitle: string;
+  showAddForm: boolean;
 
-  constructor() { }
+  textNumber: string;
 
-  ngOnInit(): void {
+  constructor() {
+    this.pageTitle = 'Kategori';
+    this.showAddForm = false;
+
+    this.textNumber = 'number';
   }
 
+  ngOnInit(): void {}
+
+  addNewCategoryHandler() {
+    this.showAddForm = true;
+  }
+
+  cancelNewCategoryHandler() {
+    this.showAddForm = false;
+  }
+
+  saveNewCategoryHandler() {
+    this.showAddForm = false;
+  }
 }
