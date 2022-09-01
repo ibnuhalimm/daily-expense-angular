@@ -1,0 +1,107 @@
+<header>
+  <nav class="relative">
+    <sh-page-title [text]="'Daily Expense'"></sh-page-title>
+  </nav>
+  <sh-bottom-nav></sh-bottom-nav>
+</header>
+<main class="relative top-20 py-2">
+  <sh-container>
+    <section>
+      <h2 class="text-xl">Hai, Ibnu</h2>
+      <p class="opacity-75">Ada pengeluaran apa hari ini?</p>
+    </section>
+
+    <section class="mt-6">
+      <div class="flex flex-row items-center justify-between gap-x-6">
+        <div>
+          <div class="flex h-40 w-40 items-center justify-center rounded-full bg-cerise-pink">
+            <div class="flex h-[8.25rem] w-[8.25rem] items-center justify-center rounded-full bg-white">
+              <div class="border-expense-home h-[7.5rem] w-[7.5rem] rounded-full border-gray-200 p-4">
+                <div class="flex h-full w-full flex-col items-center justify-center text-center text-xxs">
+                  <div class="w-14">
+                    <p class="leading-tight opacity-75">Pengeluaran Hari Ini</p>
+                  </div>
+                  <div class="my-1">
+                    <p>
+                      <span class="relative -top-2 text-xs font-bold">
+                        Rp
+                      </span>
+                      <span class="text-lg font-bold"> 202,3k </span>
+                    </p>
+                  </div>
+                  <div class="opacity-75">
+                    <p>08 Agu 2022</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full">
+          <div class="-mt-1">
+            <div class="flex h-12 w-full flex-row items-center gap-x-2 border border-t-0 border-r-0 border-l-0 border-dotted border-oxford-blue">
+              <div class="w-5">
+                <i class="bi bi-calendar2-week text-sm opacity-75"></i>
+              </div>
+              <div class="w-full">
+                <div class="text-xxs opacity-75">Bulan Ini</div>
+                <div class="text-xs">Rp 1.694.000,-</div>
+              </div>
+            </div>
+            <div class="flex h-12 w-full flex-row items-center gap-x-2 border border-t-0 border-r-0 border-l-0 border-dotted border-oxford-blue">
+              <div class="w-5">
+                <i class="bi bi-puzzle text-sm opacity-75"></i>
+              </div>
+              <div class="w-full">
+                <div class="text-xxs opacity-75">Rata-rata Harian</div>
+                <div class="text-xs">Rp 78.500,-</div>
+              </div>
+            </div>
+            <div class="flex h-12 w-full flex-row items-center gap-x-2 border border-t-0 border-r-0 border-l-0 border-dotted border-transparent">
+              <div class="w-5">
+                <i class="bi bi-sort-up text-sm opacity-75"></i>
+              </div>
+              <div class="w-full">
+                <div class="text-xxs opacity-75">Tertinggi Harian</div>
+                <div class="text-xs">Rp 850.000,-</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-8 pb-14">
+      <h2 class="text-sm font-bold">Data Pengeluaran</h2>
+      <div class="mt-4 flex flex-row justify-between gap-x-4">
+        <div class="w-2/5">
+          <sh-button-link
+            [path]="'expenses/create'"
+            [icon]="'bi bi-plus'"
+            [text]="'Pengeluaran'"
+          ></sh-button-link>
+        </div>
+        <div class="w-3/5">
+          <fieldset class="flex h-8 flex-row items-center justify-between rounded-2xl border border-solid border-chinese-silver px-3">
+            <label class="w-3 text-chinese-silver">
+              <i class="bi bi-calendar2-week"></i>
+            </label>
+            <div class="w-full">
+              <input
+                type="text"
+                value="01 Agu 2022 - 10 Agu 2022"
+                class="w-full text-center text-xxs outline-none"
+              />
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="mt-4">
+        <sh-expense-item></sh-expense-item>
+        <sh-expense-item></sh-expense-item>
+        <sh-expense-item></sh-expense-item>
+        <sh-expense-item></sh-expense-item>
+      </div>
+    </section>
+  </sh-container>
+</main>

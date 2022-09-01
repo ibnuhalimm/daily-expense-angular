@@ -1,0 +1,78 @@
+<header>
+  <nav class="relative">
+    <sh-page-back-button [path]="'/'"></sh-page-back-button>
+    <sh-page-title [text]="'Edit Pengeluaran'"></sh-page-title>
+  </nav>
+</header>
+<main class="relative top-20 py-2">
+  <sh-container>
+    <fieldset class="mb-6">
+      <label for="" class="mb-1 block"> Tanggal </label>
+      <sh-input-append-icon
+        [appendedIcon]="'bi bi-calendar2-week'"
+        [value]="valueDate"
+      ></sh-input-append-icon>
+    </fieldset>
+    <fieldset class="mb-6">
+      <label for="" class="mb-1 block"> Nominal </label>
+      <sh-input-prepend-text [prependText]="'Rp'"></sh-input-prepend-text>
+    </fieldset>
+    <fieldset class="mb-6">
+      <label for="" class="mb-1 block"> Keperluan </label>
+      <sh-input-text></sh-input-text>
+    </fieldset>
+    <fieldset class="mb-6">
+      <label for="" class="mb-1 block"> Kategori </label>
+      <div
+        class="h-36 overflow-y-auto rounded-xl border border-solid border-gray-300 p-4"
+      >
+        <eps-category-item
+          *ngFor="let category of categories"
+          [value]="category.value"
+          [label]="category.label"
+        ></eps-category-item>
+      </div>
+    </fieldset>
+    <div class="flex flex-row items-center justify-center gap-x-4">
+      <div class="w-36">
+        <sh-danger-button-transparent (onClick)="onDeleteExpense()">
+          Hapus
+        </sh-danger-button-transparent>
+      </div>
+      <div class="w-36">
+        <sh-primary-button-bg (onClick)="onSaveExpense()">
+          Simpan
+        </sh-primary-button-bg>
+      </div>
+    </div>
+  </sh-container>
+</main>
+
+<div
+  class="fixed inset-0 z-30 bg-gray-900 bg-opacity-60"
+  *ngIf="showDeleteConfirm"
+>
+  <div
+    class="absolute left-0 top-auto right-0 bottom-0 rounded-tl-xl rounded-tr-xl bg-white py-10"
+  >
+    <sh-container>
+      <div class="mx-auto w-56">
+        <p class="text-center">
+          Apakah Anda yakin ingin menghapus pengeluaran ini?
+        </p>
+      </div>
+      <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
+        <div class="w-36">
+          <sh-primary-button-transparent (onClick)="onCancelDelete()">
+            Tidak
+          </sh-primary-button-transparent>
+        </div>
+        <div class="w-36">
+          <sh-danger-button-bg (onClick)="onSaveExpense()">
+            Ya, Hapus
+          </sh-danger-button-bg>
+        </div>
+      </div>
+    </sh-container>
+  </div>
+</div>

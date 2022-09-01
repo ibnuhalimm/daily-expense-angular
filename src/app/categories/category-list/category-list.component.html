@@ -1,0 +1,63 @@
+<header>
+  <nav class="relative">
+    <sh-page-title [text]="pageTitle"></sh-page-title>
+  </nav>
+  <sh-bottom-nav></sh-bottom-nav>
+</header>
+<main class="relative top-20 py-2">
+  <sh-container>
+    <div class="w-32">
+      <sh-toolbar-primary-button (onClick)="addNewCategoryHandler()">
+        <i class="bi bi-plus"></i>
+        <span class="ml-1"> Kategori Baru </span>
+      </sh-toolbar-primary-button>
+    </div>
+    <div class="mt-4 w-full">
+      <div class="flex h-9 flex-row items-center justify-between rounded-xl border border-solid border-chinese-silver px-4 py-2">
+        <div class="w-8">
+          <i class="bi bi-search text-chinese-silver"></i>
+        </div>
+        <div class="w-full">
+          <input type="text" class="w-full outline-none" />
+        </div>
+      </div>
+    </div>
+    <div class="mt-4">
+
+    </div>
+  </sh-container>
+</main>
+
+<div class="fixed inset-0 z-30 bg-gray-900 bg-opacity-60" *ngIf="showAddForm">
+  <div
+    class="absolute left-0 top-auto right-0 bottom-0 rounded-tl-xl rounded-tr-xl bg-white py-8"
+  >
+    <sh-container>
+      <div class="mx-auto w-56">
+        <h4 class="text-center text-base font-bold">Kategori Baru</h4>
+      </div>
+      <div class="mt-6">
+        <fieldset class="mb-6">
+          <label class="mb-1 block"> Nama Kategori </label>
+          <sh-input-text></sh-input-text>
+        </fieldset>
+        <fieldset class="mb-6">
+          <label class="mb-1 block"> Nomor Urut </label>
+          <sh-input-text [type]="textNumber"></sh-input-text>
+        </fieldset>
+      </div>
+      <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
+        <div class="w-36">
+          <sh-primary-button-transparent (onClick)="cancelNewCategoryHandler()">
+            Batal
+          </sh-primary-button-transparent>
+        </div>
+        <div class="w-36">
+          <sh-primary-button-bg (onClick)="saveNewCategoryHandler()">
+            Simpan
+          </sh-primary-button-bg>
+        </div>
+      </div>
+    </sh-container>
+  </div>
+</div>
