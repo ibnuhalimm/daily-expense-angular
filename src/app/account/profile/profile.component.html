@@ -4,3 +4,51 @@
   </nav>
   <sh-bottom-nav></sh-bottom-nav>
 </header>
+<main class="relative top-20 py-2">
+  <sh-container>
+    <div
+      class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-oxford-blue text-white"
+    >
+      <i class="bi bi-person text-5xl"></i>
+    </div>
+    <div class="mt-10">
+      <fieldset
+        class="mb-8 block w-full border border-t-0 border-r-0 border-l-0 border-solid"
+      >
+        <label class="block text-xs text-oxford-blue opacity-75"> Nama </label>
+        <p class="pt-3 pb-2">Ibnu Halim Mustofa</p>
+      </fieldset>
+      <fieldset
+        class="mb-8 block w-full border border-t-0 border-r-0 border-l-0 border-solid"
+      >
+        <label class="block text-xs text-oxford-blue opacity-75"> Email </label>
+        <p class="pt-3 pb-2">ibnuhalim@pm.me</p>
+      </fieldset>
+      <fieldset
+        class="mb-8 flex w-full flex-row items-center justify-between border border-t-0 border-r-0 border-l-0 border-solid"
+      >
+        <div>
+          <label class="block text-xs text-oxford-blue opacity-75">
+            Kata Sandi
+          </label>
+          <p class="pt-3 pb-2">********</p>
+        </div>
+        <div>
+          <button
+            class="rounded-full bg-charged-blue px-4 py-1 text-xxs text-white"
+          >
+            Ganti Kata Sandi
+          </button>
+        </div>
+      </fieldset>
+    </div>
+    <div class="mx-auto mt-10 w-36">
+      <sh-danger-button-transparent>
+        <i class="bi bi-box-arrow-right"></i>
+        <span class="ml-2">
+          Keluar
+        </span>
+      </sh-danger-button-transparent>
+    </div>
+  </sh-container>
+</main>
