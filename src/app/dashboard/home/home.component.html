@@ -82,18 +82,10 @@
           ></sh-button-link>
         </div>
         <div class="w-3/5">
-          <fieldset class="flex h-8 flex-row items-center justify-between rounded-2xl border border-solid border-chinese-silver px-3">
-            <label class="w-3 text-chinese-silver">
-              <i class="bi bi-calendar2-week"></i>
-            </label>
-            <div class="w-full">
-              <input
-                type="text"
-                value="01 Agu 2022 - 10 Agu 2022"
-                class="w-full text-center text-xxs outline-none"
-              />
-            </div>
-          </fieldset>
+          <sh-toolbar-input-text
+            [icon]="'bi bi-calendar2-week'"
+            [value]="'01 Agu 2022 - 10 Agu 2022'"
+          ></sh-toolbar-input-text>
         </div>
       </div>
       <div class="mt-4">

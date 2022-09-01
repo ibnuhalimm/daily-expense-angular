@@ -1,6 +1,6 @@
 <header>
   <nav class="relative">
-    <sh-page-title [text]="pageTitle"></sh-page-title>
+    <sh-page-title [text]="'Kategori'"></sh-page-title>
   </nav>
   <sh-bottom-nav></sh-bottom-nav>
 </header>
@@ -13,17 +13,39 @@
       </sh-toolbar-primary-button>
     </div>
     <div class="mt-4 w-full">
-      <div class="flex h-9 flex-row items-center justify-between rounded-xl border border-solid border-chinese-silver px-4 py-2">
-        <div class="w-8">
-          <i class="bi bi-search text-chinese-silver"></i>
-        </div>
-        <div class="w-full">
-          <input type="text" class="w-full outline-none" />
-        </div>
-      </div>
+      <sh-toolbar-input-text [icon]="'bi bi-search'"></sh-toolbar-input-text>
     </div>
     <div class="mt-4">
-
+      <ctg-category-item
+        [categoryName]="'Arisan'"
+        (onClickDeleteButtonEvent)="onClickDeleteButton()"
+        (onClickEditButtonEvent)="onClickEditButton()"
+      ></ctg-category-item>
+      <ctg-category-item
+        [categoryName]="'Operasional Motor'"
+        (onClickDeleteButtonEvent)="onClickDeleteButton()"
+        (onClickEditButtonEvent)="onClickEditButton()"
+      ></ctg-category-item>
+      <ctg-category-item
+        [categoryName]="'Pulsa & Kuota'"
+        (onClickDeleteButtonEvent)="onClickDeleteButton()"
+        (onClickEditButtonEvent)="onClickEditButton()"
+      ></ctg-category-item>
+      <ctg-category-item
+        [categoryName]="'BPJS'"
+        (onClickDeleteButtonEvent)="onClickDeleteButton()"
+        (onClickEditButtonEvent)="onClickEditButton()"
+      ></ctg-category-item>
+      <ctg-category-item
+        [categoryName]="'Jajan Kita'"
+        (onClickDeleteButtonEvent)="onClickDeleteButton()"
+        (onClickEditButtonEvent)="onClickEditButton()"
+      ></ctg-category-item>
+      <ctg-category-item
+        [categoryName]="'Listrik & Wifi'"
+        (onClickDeleteButtonEvent)="onClickDeleteButton()"
+        (onClickEditButtonEvent)="onClickEditButton()"
+      ></ctg-category-item>
     </div>
   </sh-container>
 </main>
@@ -43,7 +65,7 @@
         </fieldset>
         <fieldset class="mb-6">
           <label class="mb-1 block"> Nomor Urut </label>
-          <sh-input-text [type]="textNumber"></sh-input-text>
+          <sh-input-text [type]="'number'"></sh-input-text>
         </fieldset>
       </div>
       <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
@@ -56,6 +78,72 @@
           <sh-primary-button-bg (onClick)="saveNewCategoryHandler()">
             Simpan
           </sh-primary-button-bg>
+        </div>
+      </div>
+    </sh-container>
+  </div>
+</div>
+
+<div class="fixed inset-0 z-30 bg-gray-900 bg-opacity-60" *ngIf="showEditForm">
+  <div
+    class="absolute left-0 top-auto right-0 bottom-0 rounded-tl-xl rounded-tr-xl bg-white py-8"
+  >
+    <sh-container>
+      <div class="mx-auto w-56">
+        <h4 class="text-center text-base font-bold">Edit Kategori</h4>
+      </div>
+      <div class="mt-6">
+        <fieldset class="mb-6">
+          <label class="mb-1 block"> Nama Kategori </label>
+          <sh-input-text [value]="'Arisan'"></sh-input-text>
+        </fieldset>
+        <fieldset class="mb-6">
+          <label class="mb-1 block"> Nomor Urut </label>
+          <sh-input-text [type]="'text'" [value]="'2'"></sh-input-text>
+        </fieldset>
+      </div>
+      <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
+        <div class="w-36">
+          <sh-primary-button-transparent
+            (onClick)="cancelEditCategoryHandler()"
+          >
+            Batal
+          </sh-primary-button-transparent>
+        </div>
+        <div class="w-36">
+          <sh-primary-button-bg (onClick)="saveEditCategoryHandler()">
+            Simpan
+          </sh-primary-button-bg>
+        </div>
+      </div>
+    </sh-container>
+  </div>
+</div>
+
+
+<div
+  class="fixed inset-0 z-30 bg-gray-900 bg-opacity-60"
+  *ngIf="showDeleteConfirm"
+>
+  <div
+    class="absolute left-0 top-auto right-0 bottom-0 rounded-tl-xl rounded-tr-xl bg-white py-10"
+  >
+    <sh-container>
+      <div class="mx-auto w-56">
+        <p class="text-center">
+          Apakah Anda yakin ingin menghapus kategori ini?
+        </p>
+      </div>
+      <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
+        <div class="w-36">
+          <sh-danger-button-transparent (onClick)="onCancelDelete()">
+            Tidak
+          </sh-danger-button-transparent>
+        </div>
+        <div class="w-36">
+          <sh-danger-button-bg (onClick)="onSaveExpense()">
+            Ya, Hapus
+          </sh-danger-button-bg>
         </div>
       </div>
     </sh-container>
