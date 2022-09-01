@@ -17,6 +17,7 @@ import { PrimaryButtonBgComponent } from './components/primary-button-bg/primary
 import { PrimaryButtonTransparentComponent } from './components/primary-button-tranparent/primary-button-transparent.component';
 import { DangerButtonBgComponent } from './components/danger-button-bg/danger-button-bg.component';
 import { DangerButtonTransparentComponent } from './components/danger-button-transparent/danger-button-transparent.component';
+import { TopBarRightActionComponent } from './components/top-bar-right-action/top-bar-right-action.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { DangerButtonTransparentComponent } from './components/danger-button-tra
     PrimaryButtonBgComponent,
     PrimaryButtonTransparentComponent,
     DangerButtonBgComponent,
-    DangerButtonTransparentComponent
+    DangerButtonTransparentComponent,
+    TopBarRightActionComponent
   ],
   declarations: [
     ContainerComponent,
@@ -60,7 +62,8 @@ import { DangerButtonTransparentComponent } from './components/danger-button-tra
     PrimaryButtonBgComponent,
     PrimaryButtonTransparentComponent,
     DangerButtonBgComponent,
-    DangerButtonTransparentComponent
+    DangerButtonTransparentComponent,
+    TopBarRightActionComponent
   ],
   providers: [],
 })
