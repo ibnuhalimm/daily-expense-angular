@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { TitleStrategy } from '@angular/router';
 import { AccountRoutingModule } from './account/account-routing.module';
 import { AccountModule } from './account/account.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +13,7 @@ import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ExpensesRoutingModule } from './expenses/expenses-routing.module';
 import { ExpensesModule } from './expenses/expenses.module';
+import { PageTitleStrategy } from './shared/providers/PageTitleStrategy';
 
 @NgModule({
   imports: [
@@ -26,10 +28,15 @@ import { ExpensesModule } from './expenses/expenses.module';
     DashboardModule,
     DashboardRoutingModule,
     ExpensesModule,
-    ExpensesRoutingModule
+    ExpensesRoutingModule,
   ],
   declarations: [AppComponent],
-  providers: [],
+  providers: [
+    {
+      provide: TitleStrategy,
+      useClass: PageTitleStrategy,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
