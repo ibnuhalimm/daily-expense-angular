@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent implements OnInit {
-  public pageTitle: string = 'Kategori';
   public showAddForm: boolean = false;
-
-  public textNumber: string = 'number';
+  public showEditForm: boolean = false;
+  public showDeleteConfirm: boolean = false;
 
   constructor() { }
 
@@ -27,5 +26,33 @@ export class CategoryListComponent implements OnInit {
 
   saveNewCategoryHandler() {
     this.showAddForm = false;
+  }
+
+  editCategoryHandler() {
+    this.showEditForm = true;
+  }
+
+  cancelEditCategoryHandler() {
+    this.showEditForm = false;
+  }
+
+  saveEditCategoryHandler() {
+    this.showEditForm = false;
+  }
+
+  onClickDeleteButton() {
+    this.showDeleteConfirm = true;
+  }
+
+  onClickEditButton() {
+    this.showEditForm = true;
+  }
+
+  onCancelDelete() {
+    this.showDeleteConfirm = false;
+  }
+
+  onSaveExpense() {
+    this.showDeleteConfirm = false;
   }
 }

@@ -5,8 +5,13 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
+    redirectTo: '/dashboard'
+  },
+  {
+    path: 'dashboard',
     component: HomeComponent,
-    pathMatch: 'full'
+    title: 'Dashboard'
   }
 ];
 

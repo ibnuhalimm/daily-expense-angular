@@ -2,6 +2,11 @@
   <nav class="relative">
     <sh-page-back-button [path]="'/'"></sh-page-back-button>
     <sh-page-title [text]="'Edit Pengeluaran'"></sh-page-title>
+    <sh-top-bar-right-action>
+      <sh-danger-button-transparent (onClick)="onDeleteExpense()">
+        <i class="bi bi-trash text-base"></i>
+      </sh-danger-button-transparent>
+    </sh-top-bar-right-action>
   </nav>
 </header>
 <main class="relative top-20 py-2">
@@ -35,11 +40,6 @@
     </fieldset>
     <div class="flex flex-row items-center justify-center gap-x-4">
       <div class="w-36">
-        <sh-danger-button-transparent (onClick)="onDeleteExpense()">
-          Hapus
-        </sh-danger-button-transparent>
-      </div>
-      <div class="w-36">
         <sh-primary-button-bg (onClick)="onSaveExpense()">
           Simpan
         </sh-primary-button-bg>
@@ -63,9 +63,9 @@
       </div>
       <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
         <div class="w-36">
-          <sh-primary-button-transparent (onClick)="onCancelDelete()">
+          <sh-danger-button-transparent (onClick)="onCancelDelete()">
             Tidak
-          </sh-primary-button-transparent>
+          </sh-danger-button-transparent>
         </div>
         <div class="w-36">
           <sh-danger-button-bg (onClick)="onSaveExpense()">
