@@ -2,18 +2,22 @@
   <div class="flex flex-row items-center justify-between gap-x-2">
     <div class="w-full">
       <badge>
-        Elektronik
+        {{ categoryName }}
       </badge>
       <div class="mt-2 flex flex-row items-center justify-between">
         <div class="w-full">
-          <p class="text-sm font-bold">Rp 11.500.000,-</p>
-          <p class="mt-1 opacity-75">Lorem ipsum dolor sit...</p>
+          <p class="text-sm font-bold">
+            {{ parseAmount() }}
+          </p>
+          <p class="mt-1 opacity-75">
+            {{ expenseName }}
+          </p>
         </div>
         <div class="w-28">
-          <time datetime="2022-08-06">
-            06
-            <br />
-            Agu 2022
+          <time [attr.datetime]="createdAt">
+            {{ parseDayOfCreatedAt() }}
+            <br>
+            {{ parseMonthYearOfCreatedAt() }}
           </time>
         </div>
       </div>

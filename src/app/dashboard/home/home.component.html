@@ -91,10 +91,35 @@
         </div>
       </div>
       <div class="mt-4">
-        <dashboard-expense-item></dashboard-expense-item>
-        <dashboard-expense-item></dashboard-expense-item>
-        <dashboard-expense-item></dashboard-expense-item>
-        <dashboard-expense-item></dashboard-expense-item>
+
+        <dashboard-expense-item
+          [expenseName]="'Bensin motor pertamax'"
+          [amount]="50000"
+          [categoryName]="'Operasional Motor'"
+          [createdAt]="'2022-08-15T08:27:35.262Z'"
+        ></dashboard-expense-item>
+
+        <dashboard-expense-item
+          [expenseName]="'Martabak telor'"
+          [amount]="20000"
+          [categoryName]="'Jajan Kita'"
+          [createdAt]="'2022-08-06T08:27:35.262Z'"
+        ></dashboard-expense-item>
+
+        <dashboard-expense-item
+          [expenseName]="'Sate ayam'"
+          [amount]="14000"
+          [categoryName]="'Kebutuhan Pangan'"
+          [createdAt]="'2022-08-04T08:27:35.262Z'"
+        ></dashboard-expense-item>
+
+        <dashboard-expense-item
+          [expenseName]="'Kuota Smartfren'"
+          [amount]="45000"
+          [categoryName]="'Pulsa dan Kuota'"
+          [createdAt]="'2022-08-01T08:27:35.262Z'"
+        ></dashboard-expense-item>
+
       </div>
     </section>
   </container>
