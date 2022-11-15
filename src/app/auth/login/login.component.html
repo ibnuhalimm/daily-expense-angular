@@ -1,1 +1,26 @@
-<p>login works!</p>
+<main class="relative pt-24 pb-10">
+  <div class="mx-auto w-4/5 max-w-xs">
+    <div>
+      <img src="./assets/open-the-door.svg" alt="Open the Door" class="w-full h-auto">
+    </div>
+    <div class="mt-10">
+      <fieldset class="mb-6">
+        <label class="mb-1 block">
+          Email
+        </label>
+        <sh-input-text [type]="'email'"></sh-input-text>
+      </fieldset>
+      <fieldset class="mb-6">
+        <label class="mb-1 block">
+          Password
+        </label>
+        <sh-input-text [type]="'password'"></sh-input-text>
+      </fieldset>
+      <div>
+        <sh-primary-button-bg (onClick)="onLoginButton()">
+          Login
+        </sh-primary-button-bg>
+      </div>
+    </div>
+  </div>
+</main>
