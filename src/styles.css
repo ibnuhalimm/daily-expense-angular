@@ -14,8 +14,6 @@
 
 @layer utilities {
   .border-expense-home {
-    border-style: dotted;
-    border-width: medium;
-    @apply border-cerise-pink;
+    border: 2px dotted #E9327C;
   }
 }
