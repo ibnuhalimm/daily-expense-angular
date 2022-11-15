@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        'xxs': '.6rem'
+        'xxs': '.6rem',
+        '2xs': '.5rem'
       },
       colors: {
         'charged-blue': '#1DACE3',
