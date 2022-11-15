@@ -1,11 +1,13 @@
 <header>
   <nav class="relative">
-    <sh-page-title [text]="'Daily Expense'"></sh-page-title>
+    <page-title>
+      Daily Expense
+    </page-title>
   </nav>
-  <sh-bottom-nav></sh-bottom-nav>
+  <bottom-nav></bottom-nav>
 </header>
 <main class="relative top-20 py-2">
-  <sh-container>
+  <container>
     <section>
       <h2 class="text-xl">Hai, Ibnu</h2>
       <p class="opacity-75">Ada pengeluaran apa hari ini?</p>
@@ -75,25 +77,25 @@
       <h2 class="text-sm font-bold">Data Pengeluaran</h2>
       <div class="mt-4 flex flex-row justify-between gap-x-4">
         <div class="w-2/5">
-          <sh-button-link
+          <button-link
             [path]="'/expenses/create'"
             [icon]="'bi bi-plus'"
             [text]="'Pengeluaran'"
-          ></sh-button-link>
+          ></button-link>
         </div>
         <div class="w-3/5">
-          <sh-toolbar-input-text
+          <toolbar-input-text
             [icon]="'bi bi-calendar2-week'"
             [value]="'01 Agu 2022 - 10 Agu 2022'"
-          ></sh-toolbar-input-text>
+          ></toolbar-input-text>
         </div>
       </div>
       <div class="mt-4">
-        <sh-expense-item></sh-expense-item>
-        <sh-expense-item></sh-expense-item>
-        <sh-expense-item></sh-expense-item>
-        <sh-expense-item></sh-expense-item>
+        <dashboard-expense-item></dashboard-expense-item>
+        <dashboard-expense-item></dashboard-expense-item>
+        <dashboard-expense-item></dashboard-expense-item>
+        <dashboard-expense-item></dashboard-expense-item>
       </div>
     </section>
-  </sh-container>
+  </container>
 </main>

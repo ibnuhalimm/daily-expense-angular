@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'sh-input-prepend-text',
+  selector: 'input-prepend-text',
   templateUrl: './input-prepend-text.component.html',
 })
 export class InputPrependTextComponent {

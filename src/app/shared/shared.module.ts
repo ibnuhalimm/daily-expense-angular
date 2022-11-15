@@ -7,7 +7,6 @@ import { ContainerComponent } from './components/container/container.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
 import { PageBackButtonComponent } from './components/page-back-button/page-back-button.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
-import { ExpenseItemComponent } from './components/expense-item/expense-item.component';
 import { ButtonLinkComponent } from './components/button-link/button-link.component';
 import { ToolbarPrimaryButtonComponent } from './components/toolbar-primary-button/toolbar-primary-button.component';
 import { InputPrependTextComponent } from './components/input-prepend-text/input-prepend-text.component';
@@ -20,6 +19,7 @@ import { DangerButtonTransparentComponent } from './components/danger-button-tra
 import { TopBarRightActionComponent } from './components/top-bar-right-action/top-bar-right-action.component';
 import { ToolbarInputTextComponent } from './components/toolbar-input-text/toolbar-input-text.component';
 import { InputPrependIconComponent } from './components/input-prepend-icon/input-prepend-icon.component';
+import { BadgeComponent } from './components/badge/badge.component';
 
 
 @NgModule({
@@ -38,7 +38,6 @@ import { InputPrependIconComponent } from './components/input-prepend-icon/input
     PageTitleComponent,
     PageBackButtonComponent,
     BottomNavComponent,
-    ExpenseItemComponent,
     ButtonLinkComponent,
     ToolbarPrimaryButtonComponent,
     ToolbarInputTextComponent,
@@ -50,14 +49,14 @@ import { InputPrependIconComponent } from './components/input-prepend-icon/input
     PrimaryButtonTransparentComponent,
     DangerButtonBgComponent,
     DangerButtonTransparentComponent,
-    TopBarRightActionComponent
+    TopBarRightActionComponent,
+    BadgeComponent
   ],
   declarations: [
     ContainerComponent,
     PageTitleComponent,
     PageBackButtonComponent,
     BottomNavComponent,
-    ExpenseItemComponent,
     ButtonLinkComponent,
     ToolbarPrimaryButtonComponent,
     ToolbarInputTextComponent,
@@ -69,7 +68,8 @@ import { InputPrependIconComponent } from './components/input-prepend-icon/input
     PrimaryButtonTransparentComponent,
     DangerButtonBgComponent,
     DangerButtonTransparentComponent,
-    TopBarRightActionComponent
+    TopBarRightActionComponent,
+    BadgeComponent
   ],
   providers: [],
 })

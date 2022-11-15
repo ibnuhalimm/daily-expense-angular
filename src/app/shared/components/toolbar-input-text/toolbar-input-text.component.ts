@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sh-toolbar-input-text',
+  selector: 'toolbar-input-text',
   templateUrl: './toolbar-input-text.component.html'
 })
 export class ToolbarInputTextComponent implements OnInit {

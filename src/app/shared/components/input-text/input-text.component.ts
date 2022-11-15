@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'sh-input-text',
+  selector: 'input-text',
   templateUrl: './input-text.component.html',
 })
 export class InputTextComponent {

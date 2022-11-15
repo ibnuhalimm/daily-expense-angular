@@ -1,7 +1,7 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'sh-danger-button-transparent',
+  selector: 'danger-button-transparent',
   templateUrl: './danger-button-transparent.component.html',
 })
 export class DangerButtonTransparentComponent {

@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'sh-danger-button-bg',
+  selector: 'danger-button-bg',
   templateUrl: './danger-button-bg.component.html',
 })
 export class DangerButtonBgComponent {

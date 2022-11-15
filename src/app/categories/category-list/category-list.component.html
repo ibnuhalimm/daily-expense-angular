@@ -1,19 +1,21 @@
 <header>
   <nav class="relative">
-    <sh-page-title [text]="'Kategori'"></sh-page-title>
+    <page-title>
+      Kategori
+    </page-title>
   </nav>
-  <sh-bottom-nav></sh-bottom-nav>
+  <bottom-nav></bottom-nav>
 </header>
 <main class="relative top-20 py-2">
-  <sh-container>
+  <container>
     <div class="w-32">
-      <sh-toolbar-primary-button (onClick)="addNewCategoryHandler()">
+      <toolbar-primary-button (onClick)="addNewCategoryHandler()">
         <i class="bi bi-plus"></i>
         <span class="ml-1"> Kategori Baru </span>
-      </sh-toolbar-primary-button>
+      </toolbar-primary-button>
     </div>
     <div class="mt-4 w-full">
-      <sh-input-prepend-icon [icon]="'bi bi-search'"></sh-input-prepend-icon>
+      <input-prepend-icon [icon]="'bi bi-search'"></input-prepend-icon>
     </div>
     <div class="mt-4">
       <ctg-category-item
@@ -47,105 +49,106 @@
         (onClickEditButtonEvent)="onClickEditButton()"
       ></ctg-category-item>
     </div>
-  </sh-container>
+  </container>
+
+  <div class="fixed inset-0 z-30 bg-gray-900 bg-opacity-60" *ngIf="showAddForm">
+    <div
+      class="absolute left-0 top-auto right-0 bottom-0 rounded-tl-xl rounded-tr-xl bg-white py-8"
+    >
+      <container>
+        <div class="mx-auto w-56">
+          <h4 class="text-center text-base font-bold">Kategori Baru</h4>
+        </div>
+        <div class="mt-6">
+          <fieldset class="mb-6">
+            <label class="mb-1 block"> Nama Kategori </label>
+            <input-text></input-text>
+          </fieldset>
+          <fieldset class="mb-6">
+            <label class="mb-1 block"> Nomor Urut </label>
+            <input-text [type]="'number'"></input-text>
+          </fieldset>
+        </div>
+        <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
+          <div class="w-36">
+            <primary-button-transparent (onClick)="cancelNewCategoryHandler()">
+              Batal
+            </primary-button-transparent>
+          </div>
+          <div class="w-36">
+            <primary-button-bg (onClick)="saveNewCategoryHandler()">
+              Simpan
+            </primary-button-bg>
+          </div>
+        </div>
+      </container>
+    </div>
+  </div>
+
+  <div class="fixed inset-0 z-30 bg-gray-900 bg-opacity-60" *ngIf="showEditForm">
+    <div
+      class="absolute left-0 top-auto right-0 bottom-0 rounded-tl-xl rounded-tr-xl bg-white py-8"
+    >
+      <container>
+        <div class="mx-auto w-56">
+          <h4 class="text-center text-base font-bold">Edit Kategori</h4>
+        </div>
+        <div class="mt-6">
+          <fieldset class="mb-6">
+            <label class="mb-1 block"> Nama Kategori </label>
+            <input-text [value]="'Arisan'"></input-text>
+          </fieldset>
+          <fieldset class="mb-6">
+            <label class="mb-1 block"> Nomor Urut </label>
+            <input-text [type]="'text'" [value]="'2'"></input-text>
+          </fieldset>
+        </div>
+        <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
+          <div class="w-36">
+            <primary-button-transparent
+              (onClick)="cancelEditCategoryHandler()"
+            >
+              Batal
+            </primary-button-transparent>
+          </div>
+          <div class="w-36">
+            <primary-button-bg (onClick)="saveEditCategoryHandler()">
+              Simpan
+            </primary-button-bg>
+          </div>
+        </div>
+      </container>
+    </div>
+  </div>
+
+
+  <div
+    class="fixed inset-0 z-30 bg-gray-900 bg-opacity-60"
+    *ngIf="showDeleteConfirm"
+  >
+    <div
+      class="absolute left-0 top-auto right-0 bottom-0 rounded-tl-xl rounded-tr-xl bg-white py-10"
+    >
+      <container>
+        <div class="mx-auto w-56">
+          <p class="text-center">
+            Apakah Anda yakin ingin menghapus kategori ini?
+          </p>
+        </div>
+        <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
+          <div class="w-36">
+            <danger-button-transparent (onClick)="onCancelDelete()">
+              Tidak
+            </danger-button-transparent>
+          </div>
+          <div class="w-36">
+            <danger-button-bg (onClick)="onSaveExpense()">
+              Ya, Hapus
+            </danger-button-bg>
+          </div>
+        </div>
+      </container>
+    </div>
+  </div>
+
 </main>
-
-<div class="fixed inset-0 z-30 bg-gray-900 bg-opacity-60" *ngIf="showAddForm">
-  <div
-    class="absolute left-0 top-auto right-0 bottom-0 rounded-tl-xl rounded-tr-xl bg-white py-8"
-  >
-    <sh-container>
-      <div class="mx-auto w-56">
-        <h4 class="text-center text-base font-bold">Kategori Baru</h4>
-      </div>
-      <div class="mt-6">
-        <fieldset class="mb-6">
-          <label class="mb-1 block"> Nama Kategori </label>
-          <sh-input-text></sh-input-text>
-        </fieldset>
-        <fieldset class="mb-6">
-          <label class="mb-1 block"> Nomor Urut </label>
-          <sh-input-text [type]="'number'"></sh-input-text>
-        </fieldset>
-      </div>
-      <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
-        <div class="w-36">
-          <sh-primary-button-transparent (onClick)="cancelNewCategoryHandler()">
-            Batal
-          </sh-primary-button-transparent>
-        </div>
-        <div class="w-36">
-          <sh-primary-button-bg (onClick)="saveNewCategoryHandler()">
-            Simpan
-          </sh-primary-button-bg>
-        </div>
-      </div>
-    </sh-container>
-  </div>
-</div>
-
-<div class="fixed inset-0 z-30 bg-gray-900 bg-opacity-60" *ngIf="showEditForm">
-  <div
-    class="absolute left-0 top-auto right-0 bottom-0 rounded-tl-xl rounded-tr-xl bg-white py-8"
-  >
-    <sh-container>
-      <div class="mx-auto w-56">
-        <h4 class="text-center text-base font-bold">Edit Kategori</h4>
-      </div>
-      <div class="mt-6">
-        <fieldset class="mb-6">
-          <label class="mb-1 block"> Nama Kategori </label>
-          <sh-input-text [value]="'Arisan'"></sh-input-text>
-        </fieldset>
-        <fieldset class="mb-6">
-          <label class="mb-1 block"> Nomor Urut </label>
-          <sh-input-text [type]="'text'" [value]="'2'"></sh-input-text>
-        </fieldset>
-      </div>
-      <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
-        <div class="w-36">
-          <sh-primary-button-transparent
-            (onClick)="cancelEditCategoryHandler()"
-          >
-            Batal
-          </sh-primary-button-transparent>
-        </div>
-        <div class="w-36">
-          <sh-primary-button-bg (onClick)="saveEditCategoryHandler()">
-            Simpan
-          </sh-primary-button-bg>
-        </div>
-      </div>
-    </sh-container>
-  </div>
-</div>
-
-
-<div
-  class="fixed inset-0 z-30 bg-gray-900 bg-opacity-60"
-  *ngIf="showDeleteConfirm"
->
-  <div
-    class="absolute left-0 top-auto right-0 bottom-0 rounded-tl-xl rounded-tr-xl bg-white py-10"
-  >
-    <sh-container>
-      <div class="mx-auto w-56">
-        <p class="text-center">
-          Apakah Anda yakin ingin menghapus kategori ini?
-        </p>
-      </div>
-      <div class="mt-6 flex flex-row items-center justify-center gap-x-4">
-        <div class="w-36">
-          <sh-danger-button-transparent (onClick)="onCancelDelete()">
-            Tidak
-          </sh-danger-button-transparent>
-        </div>
-        <div class="w-36">
-          <sh-danger-button-bg (onClick)="onSaveExpense()">
-            Ya, Hapus
-          </sh-danger-button-bg>
-        </div>
-      </div>
-    </sh-container>
-  </div>
-</div>

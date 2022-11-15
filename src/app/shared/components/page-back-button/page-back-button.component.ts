@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'sh-page-back-button',
+  selector: 'page-back-button',
   templateUrl: './page-back-button.component.html',
 })
 export class PageBackButtonComponent {

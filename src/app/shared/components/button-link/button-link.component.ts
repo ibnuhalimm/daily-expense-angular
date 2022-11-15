@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'sh-button-link',
+  selector: 'button-link',
   templateUrl: './button-link.component.html',
 })
 export class ButtonLinkComponent {

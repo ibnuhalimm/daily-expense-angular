@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'sh-bottom-nav',
+  selector: 'bottom-nav',
   templateUrl: './bottom-nav.component.html',
 })
 export class BottomNavComponent {}

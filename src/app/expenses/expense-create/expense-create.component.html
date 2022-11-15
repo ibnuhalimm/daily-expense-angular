@@ -1,25 +1,27 @@
 <header>
   <nav class="relative">
-    <sh-page-back-button [path]="'/'"></sh-page-back-button>
-    <sh-page-title [text]="'Catat Pengeluaran'"></sh-page-title>
+    <page-back-button [path]="'/'"></page-back-button>
+    <page-title>
+      Catat Pengeluaran
+    </page-title>
   </nav>
 </header>
 <main class="relative top-20 py-2">
-  <sh-container>
+  <container>
     <fieldset class="mb-6">
       <label class="mb-1 block"> Tanggal </label>
-      <sh-input-append-icon
+      <input-append-icon
         [appendedIcon]="'bi bi-calendar2-week'"
         [value]="valueDate"
-      ></sh-input-append-icon>
+      ></input-append-icon>
     </fieldset>
     <fieldset class="mb-6">
       <label class="mb-1 block"> Nominal </label>
-      <sh-input-prepend-text [prependText]="'Rp'"></sh-input-prepend-text>
+      <input-prepend-text [prependText]="'Rp'"></input-prepend-text>
     </fieldset>
     <fieldset class="mb-6">
       <label class="mb-1 block"> Keperluan </label>
-      <sh-input-text></sh-input-text>
+      <input-text></input-text>
     </fieldset>
     <fieldset class="mb-6">
       <label class="mb-1 block"> Kategori </label>
@@ -35,10 +37,10 @@
     </fieldset>
     <div>
       <div class="mx-auto w-36">
-        <sh-primary-button-bg (onClick)="onSaveExpense()">
+        <primary-button-bg (onClick)="onSaveExpense()">
           Simpan
-        </sh-primary-button-bg>
+        </primary-button-bg>
       </div>
     </div>
-  </sh-container>
+  </container>
 </main>

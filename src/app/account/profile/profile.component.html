@@ -1,11 +1,13 @@
 <header>
   <nav class="relative">
-    <sh-page-title [text]="'Profil'"></sh-page-title>
+    <page-title>
+      Profil
+    </page-title>
   </nav>
-  <sh-bottom-nav></sh-bottom-nav>
+  <bottom-nav></bottom-nav>
 </header>
 <main class="relative top-20 py-2">
-  <sh-container>
+  <container>
     <div
       class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-oxford-blue text-white"
     >
@@ -44,12 +46,12 @@
       </fieldset>
     </div>
     <div class="mx-auto mt-10 w-36">
-      <sh-danger-button-transparent (onClick)="onLogoutButton()">
+      <danger-button-transparent (onClick)="onLogoutButton()">
         <i class="bi bi-box-arrow-right"></i>
         <span class="ml-2">
           Keluar
         </span>
-      </sh-danger-button-transparent>
+      </danger-button-transparent>
     </div>
-  </sh-container>
+  </container>
 </main>

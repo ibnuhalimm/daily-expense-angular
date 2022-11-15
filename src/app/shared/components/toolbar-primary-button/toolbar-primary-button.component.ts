@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'sh-toolbar-primary-button',
+  selector: 'toolbar-primary-button',
   templateUrl: './toolbar-primary-button.component.html',
 })
 export class ToolbarPrimaryButtonComponent {
