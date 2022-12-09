@@ -15,7 +15,10 @@ const routes: Routes = [
         path: ':expenseId/edit',
         component: ExpenseEditComponent
       }
-    ]
+    ],
+    data: {
+      animation: 'Expenses'
+    }
   }
 ];
 

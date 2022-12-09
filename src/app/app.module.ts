@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TitleStrategy } from '@angular/router';
 import { AccountRoutingModule } from './account/account-routing.module';
 import { AccountModule } from './account/account.module';
@@ -18,6 +19,7 @@ import { PageTitleStrategy } from './shared/providers/PageTitleStrategy';
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     AuthModule,
     AuthRoutingModule,

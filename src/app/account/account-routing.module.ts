@@ -10,14 +10,20 @@ const routes: Routes = [
       {
         path: 'profile',
         component: ProfileComponent,
-        title: 'Profil'
+        title: 'Profil',
+        data: {
+          animation: 'Profile'
+        }
       },
       {
         path: 'change-password',
         component: ChangePasswordComponent,
-        title: 'Ganti Kata Sandi'
+        title: 'Ganti Kata Sandi',
+        data: {
+          animation: 'Change Password'
+        }
       }
-    ]
+    ],
   }
 ];
 

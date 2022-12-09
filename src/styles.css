@@ -7,6 +7,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     @apply text-xs text-oxford-blue;

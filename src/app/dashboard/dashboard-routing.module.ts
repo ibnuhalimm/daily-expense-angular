@@ -4,14 +4,12 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: '/dashboard'
-  },
-  {
     path: 'dashboard',
     component: HomeComponent,
-    title: 'Dashboard'
+    title: 'Dashboard',
+    data: {
+      animation: 'Dashboard'
+    }
   }
 ];
 

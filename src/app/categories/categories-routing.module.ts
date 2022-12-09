@@ -6,7 +6,10 @@ const routes: Routes = [
   {
     path: 'categories',
     component: CategoryListComponent,
-    title: 'Kategori'
+    title: 'Kategori',
+    data: {
+      animation: 'Categories'
+    }
   }
 ];
 
