@@ -41,7 +41,8 @@
         </div>
         <div class="w-full">
           <div class="-mt-1">
-            <div class="flex h-12 w-full flex-row items-center gap-x-2 border border-t-0 border-r-0 border-l-0 border-dotted border-oxford-blue">
+            <div
+              class="flex h-12 w-full flex-row items-center gap-x-2 border border-t-0 border-r-0 border-l-0 border-dotted border-oxford-blue">
               <div class="w-5">
                 <i class="bi bi-calendar2-week text-sm opacity-75"></i>
               </div>
@@ -50,7 +51,8 @@
                 <div class="text-xs">Rp 1.694.000,-</div>
               </div>
             </div>
-            <div class="flex h-12 w-full flex-row items-center gap-x-2 border border-t-0 border-r-0 border-l-0 border-dotted border-oxford-blue">
+            <div
+              class="flex h-12 w-full flex-row items-center gap-x-2 border border-t-0 border-r-0 border-l-0 border-dotted border-oxford-blue">
               <div class="w-5">
                 <i class="bi bi-puzzle text-sm opacity-75"></i>
               </div>
@@ -59,7 +61,8 @@
                 <div class="text-xs">Rp 78.500,-</div>
               </div>
             </div>
-            <div class="flex h-12 w-full flex-row items-center gap-x-2 border border-t-0 border-r-0 border-l-0 border-dotted border-transparent">
+            <div
+              class="flex h-12 w-full flex-row items-center gap-x-2 border border-t-0 border-r-0 border-l-0 border-dotted border-transparent">
               <div class="w-5">
                 <i class="bi bi-sort-up text-sm opacity-75"></i>
               </div>
@@ -84,10 +87,23 @@
           ></button-link>
         </div>
         <div class="w-3/5">
-          <toolbar-input-text
-            [icon]="'bi bi-calendar2-week'"
-            [value]="'01 Agu 2022 - 10 Agu 2022'"
-          ></toolbar-input-text>
+          <!--          <toolbar-input-text-->
+          <!--            [icon]="'bi bi-calendar2-week'"-->
+          <!--            [value]="'01 Agu 2022 - 10 Agu 2022'"-->
+          <!--          ></toolbar-input-text>-->
+<!--          <fieldset-->
+<!--            class="flex w-full h-8 flex-row items-center justify-between rounded-2xl border border-solid border-chinese-silver px-3">-->
+            <mat-form-field [class]="'expense-filter-field'">
+              <mat-date-range-input
+                [formGroup]="expenseDateRange"
+                [rangePicker]="picker">
+                <input matStartDate formControlName="start">
+                <input matEndDate formControlName="end">
+              </mat-date-range-input>
+              <mat-datepicker-toggle matIconPrefix [for]="picker"></mat-datepicker-toggle>
+              <mat-date-range-picker touchUi #picker></mat-date-range-picker>
+            </mat-form-field>
+<!--          </fieldset>-->
         </div>
       </div>
 
