@@ -1,0 +1,33 @@
+@tailwind utilities;
+
+//:host {
+  mat-form-field {
+    &.expense-filter-field {
+      @apply rounded-2xl;
+      @apply h-8;
+      @apply text-xs;
+
+      .mat-mdc-form-field-infix {
+        @apply py-1.5;
+      }
+
+      .mdc-text-field--no-label {
+        &:not(.mdc-text-field--outlined) {
+          &:not(.mdc-text-field--textarea) {
+            .mat-mdc-form-field-infix {
+              @apply py-1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  mat-datepicker-toggle {
+    .mat-mdc-icon-button {
+      svg {
+        @apply text-chinese-silver;
+      }
+    }
+  }
+//}
