@@ -1,0 +1,9 @@
+@tailwind utilities;
+
+mat-datepicker-toggle {
+  .mat-mdc-icon-button {
+    svg {
+      @apply w-4 h-4;
+    }
+  }
+}
