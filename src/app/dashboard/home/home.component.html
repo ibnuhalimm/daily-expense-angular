@@ -87,12 +87,6 @@
           ></button-link>
         </div>
         <div class="w-3/5">
-          <!--          <toolbar-input-text-->
-          <!--            [icon]="'bi bi-calendar2-week'"-->
-          <!--            [value]="'01 Agu 2022 - 10 Agu 2022'"-->
-          <!--          ></toolbar-input-text>-->
-<!--          <fieldset-->
-<!--            class="flex w-full h-8 flex-row items-center justify-between rounded-2xl border border-solid border-chinese-silver px-3">-->
             <mat-form-field [class]="'expense-filter-field'">
               <mat-date-range-input
                 [formGroup]="expenseDateRange"
@@ -103,7 +97,6 @@
               <mat-datepicker-toggle matIconPrefix [for]="picker"></mat-datepicker-toggle>
               <mat-date-range-picker touchUi #picker></mat-date-range-picker>
             </mat-form-field>
-<!--          </fieldset>-->
         </div>
       </div>
 
