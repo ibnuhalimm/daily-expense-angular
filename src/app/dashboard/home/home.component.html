@@ -87,15 +87,25 @@
           ></button-link>
         </div>
         <div class="w-3/5">
-            <mat-form-field [class]="'expense-filter-field'">
+            <mat-form-field class="expense-filter-field">
               <mat-date-range-input
                 [formGroup]="expenseDateRange"
                 [rangePicker]="picker">
-                <input matStartDate formControlName="start">
-                <input matEndDate formControlName="end">
+                <input matStartDate
+                       formControlName="start"
+                       [disabled]="true"
+                       [readonly]="true"
+                       (click)="openDatepicker()"
+                >
+                <input matEndDate
+                       formControlName="end"
+                       [disabled]="true"
+                       [readonly]="true"
+                       (click)="openDatepicker()"
+                >
               </mat-date-range-input>
               <mat-datepicker-toggle matIconPrefix [for]="picker"></mat-datepicker-toggle>
-              <mat-date-range-picker touchUi #picker></mat-date-range-picker>
+              <mat-date-range-picker touchUi #picker (closed)="onDatepickerClosed()"></mat-date-range-picker>
             </mat-form-field>
         </div>
       </div>
