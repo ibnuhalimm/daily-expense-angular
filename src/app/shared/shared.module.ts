@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 
 import { ContainerComponent } from './components/container/container.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
@@ -27,7 +28,8 @@ import { BadgeComponent } from './components/badge/badge.component';
     CommonModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskDirective
   ],
   exports: [
     CommonModule,
@@ -71,6 +73,8 @@ import { BadgeComponent } from './components/badge/badge.component';
     TopBarRightActionComponent,
     BadgeComponent
   ],
-  providers: [],
+  providers: [
+    provideNgxMask()
+  ],
 })
 export class SharedModule {}
