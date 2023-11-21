@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
+import { InputMaskComponent } from 'src/app/shared/components/input-mask/input-text.component';
 
 import { ContainerComponent } from './components/container/container.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
@@ -52,7 +53,8 @@ import { BadgeComponent } from './components/badge/badge.component';
     DangerButtonBgComponent,
     DangerButtonTransparentComponent,
     TopBarRightActionComponent,
-    BadgeComponent
+    BadgeComponent,
+    InputMaskComponent
   ],
   declarations: [
     ContainerComponent,
@@ -71,7 +73,8 @@ import { BadgeComponent } from './components/badge/badge.component';
     DangerButtonBgComponent,
     DangerButtonTransparentComponent,
     TopBarRightActionComponent,
-    BadgeComponent
+    BadgeComponent,
+    InputMaskComponent
   ],
   providers: [
     provideNgxMask()
